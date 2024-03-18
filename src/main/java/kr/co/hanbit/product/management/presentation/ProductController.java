@@ -21,8 +21,13 @@ public class ProductController {
         return simpleProductService.add(productDto);
     }
 
-    @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
-    public ProductDto findProductById(@PathVariable Long id) { // 경로의 일부로 데이터를 전달하는 방법
+//    @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
+//    public ProductDto findProductById(@PathVariable Long id) { // 경로의 일부로 데이터를 전달하는 방법
+//        return simpleProductService.findById(id);
+//    }
+
+    @GetMapping(value = "/products/{id}")
+    public ProductDto findProductById(@PathVariable Long id) {
         return simpleProductService.findById(id);
     }
 
