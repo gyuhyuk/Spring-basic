@@ -17,6 +17,9 @@ public class Product {
     @Min(0)
     private Integer amount;
 
+    public Long getId() {
+        return id;
+    }
     public String getName() {
         return name;
     }
@@ -31,6 +34,18 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     public boolean sameId(Long id) {
